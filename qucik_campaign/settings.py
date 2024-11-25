@@ -55,16 +55,12 @@ MIDDLEWARE = [
 
 REST_FRAMEWORK = {
 
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
-    ]
-    # 'DEFAULT_AUTHENTICATION_CLASSES': (
-    #     'base.authentication.CookiesJWTAuthentication',
-    # ),
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'account.authentication.CookiesJWTAuthentication',
+    ),
 }
 
 ROOT_URLCONF = 'qucik_campaign.urls'
